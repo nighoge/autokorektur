@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Autokorrektur</string>
+    <string name="gallery">Load from Gallery</string>
+    <string name="send">Upload Image</string>
+    <string name="imagedescription">Image from Gallery</string>
+    <string name="toast">Uploading Image</string>
+</resources>
