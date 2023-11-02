@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autokorrektur UI</title>
+</head>
+<body>
+    <h2>Upload an Image</h2>
+    <form action="http://192.168.2.108:5000/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Show the Result</h2>
+    <form action="http://192.168.2.108:5000/download/result.png" method="GET">
+        <button type="submit">Reveal</button>
+    </form>
+</body>
+</html>
