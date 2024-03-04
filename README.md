@@ -12,7 +12,7 @@ The model encounters difficulties in generating a realistic image when removing 
 ## Some Results
 The images form the left side, the originals, arefrom the ...
 
-![Image 1](images/pexels-spencer-davis-4388221.jpg)
+![Image 1]([images/pexels-spencer-davis-4388221.jpg](https://github.com/nighoge/autokorrektur/blob/main/images/1702993928.png)https://github.com/nighoge/autokorrektur/blob/main/images/1702993928.png)
 <p>Image 1</p>
 
 ![Image 2](images/1702998611.jpg)
