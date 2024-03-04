@@ -8,3 +8,17 @@ The resulting automated inpainting method is capable of replacing cars in a wide
 
 The results show that the method mostly achieves good to very good results, especially with high-quality images. 
 The model encounters difficulties in generating a realistic image when removing many cars in parking lots or highways or when there are people in the foreground.
+
+## Some Results
+The images form the left side, the originals, arefrom the ...
+
+<div>
+  <img src="images/pexels-spencer-davis-4388221.jpg" width="400" alt="Image 1">
+  <p>Image 1</p>
+</div>
+
+<!-- Second Image -->
+<div>
+  <img src="images/1702998611.jpg" width="400" alt="Image 2">
+  <p>Image 2</p>
+</div>
