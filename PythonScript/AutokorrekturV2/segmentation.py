@@ -2,7 +2,6 @@ from ultralytics import YOLO
 import torch
 from imageFunctions import expandBlackMask
 import cv2
-import numpy as np
 
 
 def createCarMask(inputImage, expansionPixels=0):
@@ -13,7 +12,7 @@ def createCarMask(inputImage, expansionPixels=0):
     for r in results:
         try:
             masks = r.masks.data
-            boxes = r.boxes.data #eigentlich ungefährlich
+            boxes = r.boxes.data #eigentlich ungefaehrlich
 
         except AttributeError as e:
             print("An AttributeError occurred:", e)
@@ -21,8 +20,13 @@ def createCarMask(inputImage, expansionPixels=0):
 
         # extract classes
         clss = boxes[:, 5]
-        # get indices of results where class is 2 (car in COCO)
-        car_indices = torch.where(clss == 2)
+        # get indices of results where class is
+        #  2: 'car',
+        #  3: 'motorcycle',
+        #  5: 'bus',
+        #  7: 'truck'
+        target_classes = torch.tensor([2, 3, 5, 7])
+        car_indices = torch.where(torch.isin(clss, target_classes))
         car_masks = masks[car_indices]
         # scale for visualizing results
         car_mask = torch.any(car_masks, dim=0).int() * 255
@@ -31,15 +35,16 @@ def createCarMask(inputImage, expansionPixels=0):
         expandBlackMask(expansionPixels=expansionPixels)
 
 
-def anyCarsLeft():
-    image = f'images/outputImages/result.png'
+def anyCarsLeft(inputImage):
+    image = inputImage
     model = YOLO('yolov8n-seg.pt')
     results = model(image)
 
     for r in results:
         boxes = r.boxes.data
         clss = boxes[:, 5]
-        car_indices = torch.where(clss == 2)
+        target_classes = torch.tensor([2, 3, 5, 7])
+        car_indices = torch.where(torch.isin(clss, target_classes))
         if len(car_indices[0]) > 0:
             return True
         return False

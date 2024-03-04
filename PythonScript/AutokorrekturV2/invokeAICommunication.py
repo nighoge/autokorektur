@@ -63,12 +63,11 @@ def prepareJSON(imageId,maskId,jsonFilePath):
 
     return json.dumps(json_data)
 
-def createSession(imageId, maskId, jsonFilePath='workflow/inpaintingv2.json'):
+def createSession(imageId, maskId, jsonFilePath='workflow/inpaintingv6.json'):
     jsonData = prepareJSON(imageId,maskId,jsonFilePath)
 
     create_session = requests.post(SESSION_URL, data=jsonData, headers=HEADERS)
 
-    # Check the response
     if create_session.status_code == 200:
         print(f"Creating Session was successful: {create_session.status_code}")
         return create_session.json()['id']
@@ -90,10 +89,10 @@ def invokeSession(sessionId):
 
 def downloadResult(numberOfLatents2ImageNodes, outputPath='images/outputImages'):
     imageCount = numberOfPicturesOnServer()
-    time.sleep(30)
+    time.sleep(15)
 
     while numberOfPicturesOnServer() < imageCount + numberOfLatents2ImageNodes:
-        time.sleep(1)
+        time.sleep(3)
 
     #The extra break is taken to prevent RuntimeError: Response content longer than Content-Length
     time.sleep(1)
@@ -101,8 +100,8 @@ def downloadResult(numberOfLatents2ImageNodes, outputPath='images/outputImages')
     download_result = requests.get(IMAGE_URL + f'i/{resultId}/full')
 
     if download_result.status_code == 200:
-        timestamp = 'result'#int(time.time())
-        full_output_path = f'{outputPath}/{timestamp}.png'
+        filename = 'resultPiece'
+        full_output_path = f'{outputPath}/{filename}.png'
 
         with open(full_output_path, 'wb') as f:
             f.write(download_result.content)
