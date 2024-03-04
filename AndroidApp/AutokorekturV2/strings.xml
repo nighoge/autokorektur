@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Autokorrektur</string>
+    <string name="gallery">Load from Gallery</string>
+    <string name="send">Upload Image</string>
+    <string name="downloadButton">Downloaded Result</string>
+    <string name="downloadToast">Downloading the Result</string>
+    <string name="imagedescription">Image from Gallery</string>
+    <string name="uploadButton">Upload Image</string>
+    <string name="uploadToast">Uploading the Image</string>
+    <string name="chooseImage">Please select an Image</string>
+    <string name="errorLoadImage">Error beim laden des Bildes</string>
+</resources>
