@@ -10,11 +10,22 @@ The results show that the method mostly achieves good to very good results, espe
 The model encounters difficulties in generating a realistic image when removing many cars in parking lots or highways or when there are people in the foreground.
 
 ## Some Results
-The images form the left side, the originals, arefrom the ...
+The images on the left side, the originals, are from <a href="https://www.pexels.com/public-domain-images/">. The right side shows the results of the developed method.
+More results can be found in the paper.
 
 <div style="display:flex;">
-    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/pexels-faruk-tokluoğlu-7385403.jpg" alt="Image 1" width="400" />
-    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/result1.jpg" alt="Image 2" width="400" />
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/pexels-faruk-tokluoğlu-7385403.jpg" alt="Original 1" width="400" />
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/result1.jpg" alt="Image 1" width="400" />
+</div>
+
+<div style="display:flex;">
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/pexels-harrison-haines-9957865.jpg" alt="Original 2" width="400" />
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/result2.jpg" alt="Image 2" width="400" />
+</div>
+
+<div style="display:flex;">
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/pexels-spencer-davis-4388221.jpg" alt="Original 3" width="400" />
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/result3.jpg" alt="Image 3" width="400" />
 </div>
 
 
