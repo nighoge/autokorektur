@@ -12,9 +12,9 @@ The model encounters difficulties in generating a realistic image when removing 
 ## Some Results
 The images form the left side, the originals, arefrom the ...
 
-![Image 1](https://github.com/nighoge/autokorrektur/blob/main/images/1702998611.png)
-<p>Image 1</p>
+<div style="display:flex;">
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/pexels-faruk-tokluoğlu-7385403.jpg" alt="Image 1" width="400" />
+    <img src="https://github.com/nighoge/autokorrektur/blob/main/images/downSized/result1.jpg" alt="Image 2" width="400" />
+</div>
 
-![Image 2](images/result1.png)
-<p>Image 2</p>
 
