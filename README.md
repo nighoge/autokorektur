@@ -15,6 +15,6 @@ The images form the left side, the originals, arefrom the ...
 ![Image 1](https://github.com/nighoge/autokorrektur/blob/main/images/1702998611.png)
 <p>Image 1</p>
 
-![Image 2](images/1702998611.jpg)
+![Image 2](images/result1.png)
 <p>Image 2</p>
 
