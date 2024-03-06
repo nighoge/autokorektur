@@ -1,4 +1,4 @@
-# autokorektur
+# autokorektur (engl. car correction)
 
 We are developing a program for the automated replacement of cars in images. 
 First, a mask of the vehicles is generated through instance segmentation using YOLOv8. 
